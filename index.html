@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page - Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1a1a1a, #333333, #555555, #2e2e2e); /* Dark gradient background */
+            background-size: 400% 400%; /* For larger gradient area */
+            animation: gradientAnimation 15s ease infinite; /* Background animation */
+            color: #f1f1f1; /* White text */
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .content-wrapper {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #2c2c2c; /* Dark card background */
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Shadow effect instead of border */
+            text-align: left;
+        }
+
+        .app-details h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ff0000; /* Red color for "Software Details" */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .app-details p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .app-details strong {
+            color: #ffcc00; /* Yellow color for labels */
+        }
+
+        .form-select {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 12px;
+            background-color: #444; /* Darker background for inputs */
+            color: #f1f1f1; /* White text */
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(31, 111, 235, 0.5); /* Light shadow around input */
+        }
+
+        .form-select:focus {
+            box-shadow: 0 0 5px rgba(31, 111, 235, 0.7); /* Focus effect */
+            outline: none;
+        }
+
+        /* All buttons with the same glowing border design */
+        .btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            text-transform: uppercase;
+            border: 3px solid #555555; /* White border */
+            background-color: #444; /* Dark background */
+            color: #fff;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #333; /* Slightly darker background on hover */
+            border-color: #fff; /* White border on hover */
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* Stronger glow effect */
+        }
+
+        .download-btn {
+            /* Specific style for download button if needed */
+        }
+
+        .telegram-btn {
+            /* Specific style for Telegram button if needed */
+        }
+
+        .developer-btn {
+            /* Specific style for developer button if needed */
+        }
+
+        /* Important Notice */
+        .important-notice {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .important-notice h3 {
+            color: #d73a49;
+            margin-bottom: 15px;
+        }
+
+        .important-notice p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .donate-section h5 {
+            font-size: 1.5rem;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        .donate-section p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .donate-section .crypto-info {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            color: #f1f1f1; /* White text for crypto info */
+        }
+
+        /* Animated text style */
+        .animated-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+            animation: colorChange 180s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #1f6feb;
+            }
+            25% {
+                color: #ff6347;
+            }
+            50% {
+                color: #32cd32;
+            }
+            75% {
+                color: #ffa500;
+            }
+            100% {
+                color: #1f6feb;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="content-wrapper">
+            <div class="app-details">
+                <h5>Software Details</h5>
+                <p><strong>File Size:</strong> 58 MB</p>
+                <p><strong>Version:</strong> Select Below</p>
+                <p><strong>Last Updated:</strong> December 2024</p>
+                <p><strong>Compatibility:</strong> Low System Hardware / Windows</p>
+                <p><strong>Developer:</strong> <span class="animated-text" id="developerText">SaulCall</span></p>
+
+                <!-- Version Dropdown -->
+                <select class="form-select" id="versionSelector">
+                    <option value="https://github.com/MesbahMX/PedaretBulletV2.0.0/releases/download/PBV2.0.0/PedaretBulletV2.0.0.zip">Version 2.0.0</option>
+                    <option value="https://github.com/MesbahMX">New Version #Soon</option>
+                </select>
+
+                <!-- Buttons -->
+                <a href="https://github.com/MesbahMX/PedaretBulletV2.0.0/releases/download/PBV2.0.0/PedaretBulletV2.0.0.zip" class="btn download-btn" id="downloadBtn" target="_blank">Download App</a>
+                <a href="https://t.me/PedaretBullett" class="btn telegram-btn" target="_blank">View Channel</a>
+                <a href="https://t.me/SaulCall" class="btn developer-btn" target="_blank">Developer</a>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="important-notice">
+                <h3>IMPORTANT NOTICE</h3>
+                <p>Performing (D)DoS attacks or credential stuffing on sites you do not own (or do not have permission to test) is illegal! The developer will not be held responsible for improper use of this software.</p>
+                <p><strong>This app requires C++ 2015 Redistributable x86/x64.</strong></p>
+                <p><strong>This app requires Net Framework 4.8.</strong></p>
+            </div>
+
+            <!-- Donate Section -->
+            <div class="donate-section">
+                <h5>Support the Developer</h5>
+                <p>If you appreciate the software and would like to support the development, feel free to donate using any of the following cryptocurrency options:</p>
+                
+                <p><strong>Bitcoin (BTC)</strong>: <span class="crypto-info">bc1q3mn4svn5km3hdzyvc3q02f89m98vzquf80qklm</span></p>
+                <p><strong>Tron (TRX)</strong>: <span class="crypto-info">TRiGVxxaFuGLnTNuYCKJw4z4fp2hP8kL5e</span></p>
+                <p><strong>Ethereum (ETH)</strong>: <span class="crypto-info">0x5548D5Fae9e3DaDB5Ac2f56a3CC67fFAEDAb6473</span></p>
+                <p><strong>Litecoin (LTC)</strong>: <span class="crypto-info">ltc1qzfvynx8dgcege224kwcjq7xfhqsyarmnccfj7w</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle dynamic download link
+        const versionSelector = document.getElementById('versionSelector');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        versionSelector.addEventListener('change', (e) => {
+            downloadBtn.href = e.target.value;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
